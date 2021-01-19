@@ -29,6 +29,6 @@ public class WebControllerTest {
         String body = this.restTemplate.getForObject("/", String.class);
 
         //then
-        assertThat(body).contains("Sprint1");
+        assertThat(body).contains("그룹2 Sprint1");
     }
 }
