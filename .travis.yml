@@ -16,6 +16,11 @@ script: "./gradlew clean build"
 
 before_install:
   - chmod 755 gradlew
+  -
+before_deploy:
+  - zip -r sprint1 *
+  - mkdir -p deploy
+  - mv sprint1.zip deploy/sprint1.zip
 
 deploy:
   - provider: s3
@@ -25,6 +30,7 @@ deploy:
     region: ap-northeast-2
     skip_cleanup: true
     acl: public_read
+    local_dir: deploy
     wait-until-deployed: true
     on:
       repo: SangGeunBae/sprint1 #Github 주소
