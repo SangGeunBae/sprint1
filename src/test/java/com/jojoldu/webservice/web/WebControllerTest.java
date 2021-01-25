@@ -29,6 +29,6 @@ public class WebControllerTest {
         String body = this.restTemplate.getForObject("/", String.class);
 
         //then
-        assertThat(body).contains("그룹2 nginx 무중단배포");
+        assertThat(body).contains("그룹2 RDS 연동");
     }
 }
