@@ -29,6 +29,6 @@ public class WebControllerTest {
         String body = this.restTemplate.getForObject("/", String.class);
 
         //then
-        assertThat(body).contains("그룹2 RDS 연동");
+        assertThat(body).contains("그룹2 RDS-EC2 연동");
     }
 }
